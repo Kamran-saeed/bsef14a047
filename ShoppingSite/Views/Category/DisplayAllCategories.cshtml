@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DataAccess.Category>
+@{
+    ViewBag.Title = "DisplayAllCategories";
+}
+<div style="padding-top: 30px;"></div>
+
+<table class="table">
+    
+    <h3>@Html.DisplayNameFor(model => model.categoryName)</h3>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="list-group-item">
+                @Html.DisplayFor(x => item.categoryName)
+            </td>
+        </tr>
+    }
+
+</table>

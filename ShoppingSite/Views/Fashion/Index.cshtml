@@ -1,0 +1,45 @@
+﻿@using System.Configuration
+@model List<DataAccess.Item>
+
+@{
+    if (Session["userId"] != null)
+    {
+        Layout = null;
+        Layout = "~/Views/Shared/MyLayout.cshtml";
+    }
+    ViewBag.Title = "Index";
+    if (TempData["Message"] != null)
+    {
+        <script>
+            alert('@TempData["Message"]');
+        </script>
+    }
+}
+
+<h2 class="text-center">Men Brands</h2>
+
+<div class="row">
+    @{
+        foreach (var men in Model)
+        {
+            <div class="col-md-4">
+
+                <div class="container" style="padding-top: 5px;">
+                    <div class="item active">
+                        <img src="@{
+                                      var first = men.itemImages.ElementAt(0);
+                                      if (first != null)
+                                      { @Url.Content(ConfigurationManager.AppSettings["ItemImagesPath"] + first.address) }
+                                  }" alt="img1" style="width:300px; height: 300px;">
+                    </div>
+                </div>
+                <div class="caption" style="margin-top: 10px;">
+                    <p class="text-left"><strong>@men.brandName @men.itemName</strong></p>
+                    <p class="text-left">@men.description</p>
+                    <p style="color:red">Rs. @men.price</p>
+                    <p style="margin-top: 10px;">@Html.ActionLink("Buy Now", "ShowItemDetail", "Item", new { itemId = men.id }, new { @class = "btn btn-md btn-info" })</p>
+                </div>
+            </div>
+    }
+    }
+</div>

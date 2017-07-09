@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingSite", "ShoppingSite\ShoppingSite.csproj", "{294A1356-1F00-43E8-A5D2-A989313F39C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{FF62D948-C8C4-4724-979A-3BC37DCE47DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{294A1356-1F00-43E8-A5D2-A989313F39C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294A1356-1F00-43E8-A5D2-A989313F39C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294A1356-1F00-43E8-A5D2-A989313F39C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294A1356-1F00-43E8-A5D2-A989313F39C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF62D948-C8C4-4724-979A-3BC37DCE47DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF62D948-C8C4-4724-979A-3BC37DCE47DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF62D948-C8C4-4724-979A-3BC37DCE47DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF62D948-C8C4-4724-979A-3BC37DCE47DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
