@@ -7,11 +7,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-12" style="margin:10px;">
+            @Html.ActionLink("View Items", "Index", "AdminChanger", null, new { @class = "btn btn-primary" })
+        </div>
+        <div class="col-md-12" style="margin:10px;">
             @Html.ActionLink("Add Category", "AddCategory", "Category", null, new { @class = "btn btn-primary" })
         </div>
-        <div class="col-md-2">
+        <div class="col-md-12" style="margin:10px;">
             @Html.ActionLink("Add Items", "AddItem", "Item", null, new { @class = "btn btn-primary" })
+        </div>
+        <div class="col-md-12" style="margin:10px;">
+            @Html.ActionLink("Show All Categories", "DisplayAllCategories", "Category", null, new { @class = "btn btn-primary" })
         </div>
         
     </div>

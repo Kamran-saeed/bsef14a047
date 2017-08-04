@@ -55,5 +55,14 @@ namespace ShoppingSite.Controllers
             TempData["ClearCartItemMessage"] = "Cart Items Cleared Successfully !";
             return RedirectToAction("ShowCartItems", "Cart");
         }
+
+        public ActionResult ClearCartItem(int id)
+        {
+            int userID = Convert.ToInt32(Session["userId"]);
+            db.Cards.Remove(db.Cards.FirstOrDefault(x => x.cartId == id));
+            db.SaveChanges();
+            TempData["ClearCartItemMessage"] = "Cart Item Cleared !";
+            return RedirectToAction("ShowCartItems", "Cart");
+        }
     }
 }
